@@ -246,7 +246,7 @@ sec0_main_right_inside_bottom3.innerHTML = right_col3.map(
 ).join('');
 
 sec1__news_block.innerHTML = news.map(
-    item => `<article>
+    item => `<article  onclick="window.open('../text_2-page/index.html')">
                 <img src="${item.img}">
                 <div>
                     <p>${item.date}</p>

@@ -393,7 +393,7 @@ sec1_main_mid_right_karta_inside5_desc.innerHTML = descpr.map(
 ).join('');
 
 sec2_main_mid.innerHTML = tovari.map(
-    item => `<article onclick="window.open('../kartochka_5-page/index.html')">
+    item => `<article>
                 <div class="sec2_main_art_top">
                     <div class="sec2_main_art_top_ins" style="background-image: url('${item.img}')">
                     <div class="sec1_main_mid_right_karta_inside1">

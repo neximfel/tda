@@ -226,7 +226,7 @@ right_col3 = [
 ];
 
 articles.innerHTML = popular.map(
-    item => `<article class="artMove">
+    item => `<article class="artMove"  onclick="window.open('../kartochka_5-page/index.html')">
                 <img src="${item.img}">
                 <div>
                     <h3>${item.title}</h3>

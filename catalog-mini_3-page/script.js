@@ -410,7 +410,7 @@ sec0_main_left_bot2_inside.innerHTML = menu_left_bot2_inside.map(
 ).join('');
 
 sec1__catalog_block.innerHTML = eda.map(
-    item => `<article>
+    item => `<article onclick="window.open('../kartochka_5-page/index.html')">
                 <img src="${item.img}">
                 <p>${item.title}</p>
             </article>`
