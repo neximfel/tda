@@ -11,7 +11,7 @@ let sec1_main_mid_right_karta_inside5_desc = document.getElementById('sec1_main_
 let sec2_main_mid = document.getElementById("sec2_main_mid");
 const leftbutton = document.getElementById('sec2_main_bot_left');
 const rightbutton = document.getElementById('sec2_main_bot_right');
-const dots = document.querySelectorAll('.dot');
+const dot = document.querySelectorAll('.dot');
 let articles = document.getElementById('articles')
 let malinka = document.getElementById('malinka')
 let sec1__top_listalka = document.getElementById('sec1__top_listalka')
@@ -361,27 +361,3 @@ catalogToggles.forEach(function(btn){
 function toggleColor(element){
   element.classList.toggle('active');
 }
-
-right_button.addEventListener('click', () => {
-    articles.forEach(art => {
-        art.classList.toggle('hidden')
-    })
-    if (numberDot > 0) {
-        numberDot--;
-    } else {
-        numberDot = dot.length - 1; 
-    }
-    updateRound();
-})
-
-left_button.addEventListener('click', () => {
-    articles.forEach(art => {
-        art.classList.toggle('hidden')
-    })
-    if (numberDot < dot.length - 1) {
-        numberDot++;
-    } else {
-        numberDot = 0; 
-    }
-    updateRound();
-})
