@@ -12,8 +12,51 @@ let sec2_main_mid = document.getElementById("sec2_main_mid");
 const leftbutton = document.getElementById('sec2_main_bot_left');
 const rightbutton = document.getElementById('sec2_main_bot_right');
 const dots = document.querySelectorAll('.dot');
+let articles = document.getElementById('articles')
+let malinka = document.getElementById('malinka')
 let sec1__top_listalka = document.getElementById('sec1__top_listalka')
+let right_butt = document.getElementById('malina_right')
+let left_butt = document.getElementById('malina_left')
 let currentIndex = 0;
+
+malina = [
+    
+]
+
+popular = [
+    {
+        img: "images/sec2/image1.png",
+        title:"Молочная продукция"
+    },
+    {
+        img: "images/sec2/image2.png",
+        title:"Мясная продукция"
+    },
+    {
+        img: "images/sec2/image3.png",
+        title:"Овощи"
+    },
+    {
+        img: "images/sec2/image4.png",
+        title:"Ягоды"
+    },
+    {
+        img: "images/sec2/image1.png",
+        title:"Молочная продукция"
+    },
+    {
+        img: "images/sec2/image2.png",
+        title:"Мясная продукция"
+    },
+    {
+        img: "images/sec2/image3.png",
+        title:"Овощи"
+    },
+    {
+        img: "images/sec2/image4.png",
+        title:"Ягоды"
+    },
+]
 
 banki = [
     {
@@ -182,6 +225,15 @@ right_col3 = [
     }
 ];
 
+articles.innerHTML = popular.map(
+    item => `<article class="artMove">
+                <img src="${item.img}">
+                <div>
+                    <h3>${item.title}</h3>
+                </div>
+            </article>`,
+).join('');
+
 sec0_main_left_top.innerHTML = menu_left_top.map(
     item => `<a href="">
                 <p>${item.title}</p>
@@ -216,6 +268,30 @@ sec0_main_right_inside_bottom3.innerHTML = right_col3.map(
                 <h3>${item.title}</h3>
                 ${item.links.map(link => `<a href="">${link}</a>`).join('')}
               </div>`
+).join('');
+
+malinka.innerHTML = malina.malina(
+    item => `<article class="article${item.mal_active}">
+                <div class="left">
+                    <h2>${item.title}</h2>
+                    <p>${item.text}</p>
+                    <div class="mobile_prik">
+                        <p>${item.text}</p>
+                        <span>Читать далее</span>
+                    </div>
+                    <div class="pr">
+                        <h3>${item.price_now}</h3>
+                        <h4>${item.price_old}</h4>
+                    </div>
+                    <div class="butts">
+                        <button class="purple">В корзину</button>
+                        <button class="brod_purp">Подробнее</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="${item.img_src}" alt="" class="cheto">
+                </div>
+            </article>`,
 ).join('');
 
 sec1__top_listalka.innerHTML = banki.map(
@@ -285,3 +361,27 @@ catalogToggles.forEach(function(btn){
 function toggleColor(element){
   element.classList.toggle('active');
 }
+
+right_button.addEventListener('click', () => {
+    articles.forEach(art => {
+        art.classList.toggle('hidden')
+    })
+    if (numberDot > 0) {
+        numberDot--;
+    } else {
+        numberDot = dot.length - 1; 
+    }
+    updateRound();
+})
+
+left_button.addEventListener('click', () => {
+    articles.forEach(art => {
+        art.classList.toggle('hidden')
+    })
+    if (numberDot < dot.length - 1) {
+        numberDot++;
+    } else {
+        numberDot = 0; 
+    }
+    updateRound();
+})
