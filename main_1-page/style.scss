@@ -389,7 +389,6 @@ header{
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    background: #EDF0F6;
     .secret_mobile{
         display: none;
         color: #6701BA;
@@ -490,12 +489,24 @@ header{
 }
 //                  СЕКЦИЯ 5
 .sec5{
+    height: 770px;
+    max-width: 1290px;
+    margin: 0 auto;
     .sec5__title{
+        display: flex;
+        justify-content: space-between;
         h1{
-
+            color: #272727;
+            font-weight: bold;
+            font-size: 2.25rem; 
         }
         a{
-
+            color: #6701BA;
+            font-size: 0.85rem;
+            line-height: 1.2;
+            text-align: justify;
+            text-decoration: none;
+            border-bottom: 1px solid #82BA01; 
         }
     }
     .main_them{
@@ -507,7 +518,7 @@ header{
 
             }
             #malina_right{
-                
+
             }
             .dot{
                 &.active{
