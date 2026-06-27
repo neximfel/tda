@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин - Продукты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav_top">
+                <div class="nav_top_inside">
+                    <a href="">
+                        <div><img src="images/nav/tda.png" alt=""></div>
+                    </a>
+                    <div class="nav_top_inside_poisk">
+                        <input type="text" placeholder="Поиск">
+                        <button><img src="images/nav/search.png" alt=""></button>
+                    </div>
+                    <button id="nav_top_inside_geo">
+                        <div class="nav_top_inside_geo_sphere">
+                            <img src="images/nav/navigation.png" alt="">
+                        </div>
+                        <div class="nav_top_inside_geo_city">
+                            <p>Выберите филиал</p>
+                            <h4>г. Владивосток <span><img src="images/nav/arrow.png" alt=""></span></h4>
+                        </div>
+                    </button>
+                    <div class="nav_top_inside_phone">
+                        <div class="nav_top_inside_phone_sphere">
+                            <img src="images/nav/phone.png" alt="">
+                        </div>
+                        <div class="nav_top_inside_phone_number">
+                            <p>+7 (123) 456-78-90</p>
+                            <p>+7 (123) 456-78-90</p>
+                        </div>
+                    </div>
+                    <button class="nav_top_inside_button">
+                        <div><img src="images/nav/mail.png" alt=""></div>
+                        Написать нам
+                    </button>
+                    <div class="tabet_menu">
+                        <button class="nav_top_tablet_menu_hid"><img src="images/sec1/user.png" alt=""></button>
+                        <button class="nav_top_tablet_menu_hid"><img src="images/sec1/file.png" alt=""></button>
+                        <button class="nav_top_tablet_menu_hid"><img src="images/sec1/bag.png" alt=""></button>
+                        <button id="catalog_btn_tablet" data-target="sec0"><img id="catalog_btn_tablet_img" src="images/sec1/menu.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_bot">
+                <ul>
+                    <button id="catalog_btn" data-target="sec0">
+                        <div><img id="catalog_btn_img" src="images/nav/list.png" alt="" class="nav_bot_button_img1"></div>
+                        Каталог
+                    </button>
+                    <a href="">Молочная продукция</a>
+                    <a href="">Мясная продукция</a>
+                    <a href="">Напитки</a>
+                    <a href="" class="a_tablet">Бакалея</a>
+                    <a href="" class="a_tablet">Грибы</a>
+                    <a href="" class="a_tablet">Крупы</a>
+                    <a href="" class="a_tablet">Овощи</a>
+                    <a href="" class="a_tablet">Ягоды</a>
+                    <a href="" class="troetochie"><button><img src="images/nav/dots.png" alt=""></button></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="sec0">
+            <div class="sec0_main">
+                <div class="sec0_main_left">
+                    <div class="sec0_left_scroll_wrapper">
+                        <div id="sec0_main_left_top"></div>
+                        <h2>О компании</h2>
+                        <div id="sec0_main_left_bot1_inside"></div>
+                        <h2>Покупателям</h2>
+                        <div id="sec0_main_left_bot2_inside"></div>
+                    </div>
+                </div>
+                <div class="sec0_main_right">
+                    <div class="sec0_main_right_inside">
+                        <h1>Бакалея</h1>
+                        <div class="sec0_main_right_inside_bottom">
+                            <div id="sec0_main_right_inside_bottom1"></div>
+                            <div id="sec0_main_right_inside_bottom2"></div>
+                            <div id="sec0_main_right_inside_bottom3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- СЕКЦИЯ 1 -->
+        <section class="sec1">
+            <div class="sec1_main">
+                <div class="sec1_main_top">
+                    <div class="sec1_main_top_ins">
+                        <a href="">Главная</a>
+                        <p>|</p>
+                        <h5>Каталог</h5>
+                    </div>
+                </div>
+                <div class="sec1_main_mid">
+                    <div class="sec1_main_mid_catalog">
+                        <h1>Каталог</h1>
+                        <div id="sec1__catalog_block"></div>
+                        <a href="#" class="sec1_main_bot_all">Смотреть все</a>
+                    </div>
+                    <div class="sec1_main_mid_right_cart">
+                        <div class="sec1_main_right_inside">
+                            <p>1 560 ₽</p>
+                            <div class="sec1_mai_right_notifs">
+                                <button><img src="images/sec1/bag.png" alt=""></button>
+                                <button><img src="images/sec1/file.png" alt=""></button>
+                                <button><img src="images/sec1/user.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec2">
+            <div class="sec2_main">
+                <div class="sec2_main_top_title">
+                    <h1>Наши предложения</h1>
+                    <a href="">Смотреть все</a>
+                </div>
+                <div class="sec2_main_mid_slider">
+                    <div id="sec2_main_mid"></div>
+                </div>
+                <div class="sec2_main_bot">
+                    <button id="sec2_main_bot_left"><img src="images/sec2/arrow_left.png" alt=""></button>
+                    <div class="sec2_main_bot_dots">
+                        <button class="dot active"></button>
+                        <button class="dot"></button>
+                        <button class="dot"></button>
+                        <button class="dot"></button>
+                    </div>
+                    <button id="sec2_main_bot_right"><img src="images/sec2/arrow_right.png" alt=""></button>
+                </div>
+            </div>
+            <a href="#" class="sec2_main_bot_all">Смотреть все</a>
+        </section>
+        <!-- НИЖНЯЯ ПАНЕЛЬ -->
+        <section class="sec3">
+            <button onclick="toggleColor(this)" data-target="sec0"><div><img id="catalog_btn_img_mobile" src="images/sec3/list.png" alt=""><p>Каталог</p></div></button>
+            <a href="" onclick="toggleColor(this)"><div><img src="images/sec3/search.png" alt=""><p>Поиск</p></div></a>
+            <a href="" onclick="toggleColor(this)"><div><img src="images/sec3/bag.png" alt=""><p>Корзина</p></div></a>
+            <a href="" onclick="toggleColor(this)"><div><img src="images/sec3/user.png" alt=""><p>Аккаунт</p></div></a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_top">
+            <div class="footer_top_main">
+                <div class="footer_top_main1">
+                    <a href="">
+                        <div><img src="images/nav/tda.png" alt=""></div>
+                    </a>
+                </div>
+                <div class="footer_top_main2">
+                    <h2>О компании</h2>
+                    <div>
+                        <a href="">Новости</a>
+                        <a href="">Контакты</a>
+                        <a href="">Пользовательское соглашение</a>
+                        <a href="">Политика обработки персональных данных</a>
+                    </div>
+                </div>
+                <div class="footer_top_main3">
+                    <h2>Покупателям</h2>
+                    <div>
+                        <a href="">Доставка и оплата</a>
+                        <a href="">Как вернуть</a>
+                        <a href="">Как заказать</a>
+                        <a href="">Программа лояльности</a>
+                        <a href="">Вопросы и ответы</a>
+                        <a href="">Юридическим лицам</a>
+                    </div>
+                </div>
+                <div class="footer_top_main4">
+                    <h2>Подписаться на рассылку актуальных новостей:</h2>
+                    <div class="footer_top_main4_inside">
+                        <input type="text" placeholder="Email">
+                        <button>
+                            <div>
+                                <img src="images/footer/mail.png" alt="">
+                            </div>
+                            Подписаться
+                        </button>
+                    </div>
+                    <h2 class="footer_top_main4_hid">Заказывайте товары круглосуточно и задавайте вопросы</h2>
+                    <h1 class="footer_top_main4_hid">8 800 123-45-67</h1>
+                </div>
+            </div>
+            <div class="footer_top_main5">
+                <h2>Заказывайте товары круглосуточно и задавайте вопросы</h2>
+                <h1>8 800 123-45-67</h1>
+            </div>
+        </div>
+        <div class="footer_bot">
+            <div class="footer_bot_main">
+                <p>© Интернет-магазин “TDA”</p>
+                <div>
+                    <a href=""><img src="images/footer/twitter.png" alt=""></a>
+                    <a href=""><img src="images/footer/facebook.png" alt=""></a>
+                    <a href=""><img src="images/footer/vk.png" alt=""></a>
+                    <a href=""><img src="images/footer/inst.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
