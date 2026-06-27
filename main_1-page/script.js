@@ -270,29 +270,7 @@ sec0_main_right_inside_bottom3.innerHTML = right_col3.map(
               </div>`
 ).join('');
 
-malinka.innerHTML = malina.malina(
-    item => `<article class="article${item.mal_active}">
-                <div class="left">
-                    <h2>${item.title}</h2>
-                    <p>${item.text}</p>
-                    <div class="mobile_prik">
-                        <p>${item.text}</p>
-                        <span>Читать далее</span>
-                    </div>
-                    <div class="pr">
-                        <h3>${item.price_now}</h3>
-                        <h4>${item.price_old}</h4>
-                    </div>
-                    <div class="butts">
-                        <button class="purple">В корзину</button>
-                        <button class="brod_purp">Подробнее</button>
-                    </div>
-                </div>
-                <div class="right">
-                    <img src="${item.img_src}" alt="" class="cheto">
-                </div>
-            </article>`,
-).join('');
+
 
 sec1__top_listalka.innerHTML = banki.map(
     item => `<article>
@@ -308,27 +286,6 @@ sec1__top_listalka.innerHTML = banki.map(
             </article>`
 ).join('');
 
-document.addEventListener('click', (event) => {
-  const target = event.target;
-  if (target && target.classList.contains('counter_btn_plus')){
-    const parent = target.parentElement;
-    const numberDiv = parent.querySelector('.counter_btn_number');
-    if (numberDiv){
-        let count = parseInt(numberDiv.textContent) || 1;
-        numberDiv.textContent = count + 1;
-    }
-  }
-  if (target && target.classList.contains('counter_btn_minus')){
-    const parent = target.parentElement;
-    const numberDiv = parent.querySelector('.counter_btn_number');
-    if (numberDiv){
-        let count = parseInt(numberDiv.textContent) || 1;
-        if (count > 1){
-            numberDiv.textContent = count - 1;
-        }
-    }
-  }
-});
 
 catalogToggles.forEach(function(btn){
     btn.addEventListener('click', function(){
